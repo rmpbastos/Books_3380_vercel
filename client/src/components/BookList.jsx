@@ -35,10 +35,10 @@ const BookList = () => {
                         <h2 className='display-4 text-center'>Books List</h2>
                     </div>
 
-                    {/* <div className="col-md-12">
+                    <div className="col-md-12">
                         <br />
                         <h2 className="counter"> <p>{books.length}</p></h2>
-                    </div> */}
+                    </div>
 
                     <div className="row">
                         <div className="col-md-12 d-flex justify-content-end">
