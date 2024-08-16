@@ -7,7 +7,7 @@ const BookList = () => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        axios.get('https://books-3380-vercel.vercel.app//books')
+        axios.get('https://books-3380-vercel.vercel.app/books')
             .then(res => setBooks(res.data))
             .catch(err => console.error(err));
     }, []);
