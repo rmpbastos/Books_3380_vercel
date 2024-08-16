@@ -1,0 +1,114 @@
+--------------------
+--------------------
+BACKEND
+--------------------
+1 - Initialize a new Node.js project
+
+Root folder:
+
+$ npm init -y
+
+--------------------
+2 - Create folders, install dependencies, and setup the Express server
+
+server folder:
+
+$ npm install express mongoose cors nodemon
+
+- Create file server.js (copy content)
+
+- Create subfolders models and routes
+
+--------------------
+3 - Create the Book model
+
+models folder:
+
+- Create file Book.js (copy content)
+
+--------------------
+4 - Create the routes for managing books
+
+routes folder:
+
+- Create file books.js (copy content)
+
+--------------------
+--------------------
+FRONTENT
+--------------------
+1 - Initialize a new Vite project
+
+Root folder:
+
+$ npm create vite@latest client --template react
+$ cd client
+$ npm install
+
+--------------------
+2 - Install dependencies for the frontend
+
+client folder:
+
+$ npm install axios react-router-dom bootstrap
+
+--------------------
+3 - Create folders
+
+src folder:
+
+- Create subfolders src/components and src/pages
+
+--------------------
+4 - Create the BookCard component
+
+src/components folder:
+
+- Create BookCard.jsx (copy content)
+
+--------------------
+5 - Create the BookList component
+
+src/components folder:
+
+- Create BookList.jsx (copy content)
+
+--------------------
+6 - Create the AddBook component
+
+src/components folder:
+
+- Create AddBook.jsx (copy content)
+
+--------------------
+7 - Set up routing for the app
+
+App.jsx file (copy content)
+
+--------------------
+8 - Ensure main.jsx include the app component
+
+--------------------
+9 - Styling
+
+- Copy the given styles.css
+- Comment out index.css and App.css
+
+- Ensure bootstrap is installed (already done in step 2)
+- Add the following import statement to main.jsx (or App.jsx)
+        import 'bootstrap/dist/css/bootstrap.min.css';
+
+--------------------
+--------------------
+RUN THE BACKEND AND FRONTENT
+--------------------
+Start the backend server:
+
+$ cd server
+$ node server.js
+or nodemon server.js
+
+Start the frontend server:
+
+On a different terminal:
+$ npm run dev
