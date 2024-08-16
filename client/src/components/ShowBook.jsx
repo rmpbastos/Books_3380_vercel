@@ -7,7 +7,7 @@ const ShowBook = () => {
     const [book, setBook] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/books/${id}`)
+        axios.get(`/books/${id}`)
             .then(res => setBook(res.data))
             .catch(err => console.error('Error fetching book:', err));
     }, [id]);

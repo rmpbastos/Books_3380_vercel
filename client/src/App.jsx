@@ -4,6 +4,10 @@ import BookList from './components/BookList';
 import AddBook from './components/AddBook';
 import ShowBook from './components/ShowBook';
 import EditBook from './components/EditBook';
+import axios from 'axios';
+
+// Sets axios default values
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL;
 
 
 function App() {

@@ -12,7 +12,7 @@ const AddBook = () => {
         e.preventDefault();
         const newBook = { title, author, description };
 
-        axios.post('http://localhost:5000/books/add', newBook)
+        axios.post('/books/add', newBook)
             .then(() => navigate('/'))
             .catch(err => console.error(err));
     };

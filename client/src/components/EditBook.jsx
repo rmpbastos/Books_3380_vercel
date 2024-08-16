@@ -11,7 +11,7 @@ const EditBook = () => {
 
     useEffect(() => {
         // Fetch the existing book data to populate the form
-        axios.get(`http://localhost:5000/books/${id}`)
+        axios.get(`/books/${id}`)
             .then(res => {
                 setTitle(res.data.title);
                 setAuthor(res.data.author);
@@ -24,7 +24,7 @@ const EditBook = () => {
         e.preventDefault();
         const updatedBook = { title, author, description };
 
-        axios.put(`http://localhost:5000/books/${id}`, updatedBook)
+        axios.put(`/books/${id}`, updatedBook)
             .then(() => navigate('/'))
             .catch(err => console.error('Error updating book:', err));
     };
