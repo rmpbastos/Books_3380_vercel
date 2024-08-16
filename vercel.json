@@ -5,7 +5,7 @@
     "rewrites": [
         {
             "source": "/server/(.*)",
-            "destination": "/server/server.jsd"
+            "destination": "/server/server.js"
         }
     ]
 }
