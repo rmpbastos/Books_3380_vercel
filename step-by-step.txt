@@ -112,3 +112,31 @@ Start the frontend server:
 
 On a different terminal:
 $ npm run dev
+
+--------------------
+--------------------
+DEPLOYMENT
+--------------------
+--------------------
+- Create vercel.json in the root folder (copy content)
+
+- In Vercel.com, navigate to the deployed project -> Settings -> General:
+-- In the "Build & Development Settings" tab:
+--- Build Command: cd client && npm install && ./node_modules/vite/bin/vite.js build
+--- Output Directory: client/dist
+
+- In Vercel.com, navigate to the deployed project -> Settings -> Environment Variables:
+-- Add the following new variable, keeping all checkboxes checked (Production, Preview, Development):
+Key: VITE_API_BASE_URL
+Value: *the url of the deployment, ex: https://books-3380-vercel.vercel.app/
+
+
+- In the client folder:
+Create a .env file with the content:
+VITE_API_BASE_URL="http://localhost:5000"
+
+* Make sure the following code is in App.jsx:
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL;
+
+* Also make sure that all axios calls are set to something like "/books" and NOT "/http:localhost:5000/books"
+
